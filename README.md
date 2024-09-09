@@ -1,5 +1,11 @@
 # 🎵 Python Audio Extractor
 
+
+![Screenshot 1](assets/post/1.jpg) 
+![Screenshot 2](assets/post/2.jpg)
+![Screenshot 3 ](assets/post/3.jpg) 
+![Screenshot 4](assets/post/4.jpg)
+
 **Python Audio Extractor** is a simple and user-friendly application that allows you to extract audio from video files. The application is built using Python's `tkinter` library for the GUI and `moviepy` for handling video and audio processing.
 
 ## 🛠️ Features
