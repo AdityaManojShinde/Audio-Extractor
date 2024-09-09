@@ -12,8 +12,8 @@
 
 1. **Clone the Repository**
    ```bash
-   git clone https://github.com/AdityaManojShinde/PythonAudioExtractor.git
-   cd PythonAudioExtractor
+   git clone https://github.com/AdityaManojShinde/Audio-Extractor.git
+   cd Audio-Extractor
 
 2. **Install Required Libraries **
     Ensure you have Python installed, then install the necessary packages:
@@ -25,5 +25,12 @@
    ```bash
    python main.py
 
+
+## 🙌 Contributing
+
+Contributions are what make the open-source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
+
+## Author
+Aditya Shinde
 
   
