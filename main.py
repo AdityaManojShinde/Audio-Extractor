@@ -8,12 +8,25 @@ class AudioExtractor:
         self.root = root
         self.root.title("Python Audio Extractor")
         self.root.geometry("400x200")
+        
+        # Description Label
+        self.description_label = ttk.Label(root, text="Select a video file to extract its audio:", font=("Arial", 12))
+        self.description_label.pack(pady=10)
 
-        self.select_video_button = tk.Button(root, text="Select Video", command=self.select_video, font=("Arial", 12),justify=tk.CENTER,bg='skyblue')
-        self.select_video_button.grid(row=0, column=0, padx=20, pady=20)
+        # Select Video Button
+        self.select_video_button = ttk.Button(root, text="Select Video", command=self.select_video)
+        self.select_video_button.pack(pady=20)
+        self.center_window()
 
-      
-
+    def center_window(self):
+        """Centers the window on the screen."""
+        self.root.update_idletasks()
+        width = self.root.winfo_width()
+        height = self.root.winfo_height()
+        x = (self.root.winfo_screenwidth() // 2) - (width // 2)
+        y = (self.root.winfo_screenheight() // 2) - (height // 2)
+        self.root.geometry(f'{width}x{height}+{x}+{y}')
+        
     def select_video(self):
         video_path = filedialog.askopenfilename(filetypes=[("MP4 Files", "*.mp4")])
         if video_path:
@@ -24,9 +37,7 @@ class AudioExtractor:
             video = mp.VideoFileClip(video_path)
             audio_path = filedialog.asksaveasfilename(defaultextension=".mp3", filetypes=[("MP3 Files", "*.mp3")])
             if audio_path:
-                
                 video.audio.write_audiofile(audio_path)
-                
                 messagebox.showinfo("Success", "Audio extracted successfully!")
         except Exception as e:
             messagebox.showerror("Error", f"An error occurred: {e}")
